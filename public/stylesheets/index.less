@@ -1,0 +1,32 @@
+.skills {
+    position: relative;
+    text-align: right;
+    h1 {
+        position: absolute;
+        left:  -10VW;
+        top: 10VW;
+        display: block;
+        font-size: 15VW;
+        margin: 0;
+        padding: 0;
+        transform: rotate(-90deg);
+        vertical-align: top;
+    }
+    
+    ul {
+        display: inline-block;
+        padding: 0 10VW 0 0;
+        margin: 0;
+        width: 60VW;
+    }
+    li { 
+        list-style: none;
+        width: 60VW;
+    }
+    li:nth-child(odd) {
+        text-align: left;
+    }
+    li:nth-child(even) {
+        text-align: right;
+    }
+}

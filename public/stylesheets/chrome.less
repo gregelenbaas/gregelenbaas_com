@@ -1,0 +1,98 @@
+header {
+    width: 100%;
+    height: 9VW;
+    position: relative;
+    border-bottom: 2px solid #000; 
+    
+    h1 {
+        padding: 1VW 0 0;
+        margin: 0;
+        line-height:5VW;
+        font-size: 7VW;
+        i {
+            padding: 0 10px 0 5px; 
+            color: @primary;
+        }
+    }
+    
+    ul {
+        text-align: right;
+        height: 5VW;
+        margin: 0;
+        padding: 4VW 5px 0 0;
+    }
+    
+    li {
+        display: inline;
+        list-style: none;
+        padding: 7VW 5px 0;
+        font-weight: bold;
+        font-size: 2VW;
+    }
+    
+    nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 40px;
+    
+        #hamburger {
+            display: none;
+            visibility:hidden;
+        }
+    
+        .fa { 
+            display: none;
+        } 
+    }
+}
+
+@media (max-width: 560px) {
+    header {
+        nav {
+            width: 100%;
+            ul {
+                display: block;
+                position: absolute;
+                top: 9VW;
+                width: 100VW;
+                height: 0;
+                padding: 0;
+                margin-top: 2px;
+                overflow: hidden;
+                z-index:100;
+                transition: height 0.3s ease-in;
+            }
+            li {
+                display: block;
+                width: 100%;
+                background-color: @primary;
+                color: #ffffff;
+                padding: 2VW 10VW 2VW 0;
+                a, a:visited {
+                    color: #ffffff;
+                    font-size: 6VW;
+                    line-height: 6VW;
+                    width: 90VW;
+                    padding-right: 10VW;
+                    display: block;
+                }
+            }
+    
+            #hamburger {
+                display: inline;
+            }
+            input[type=checkbox]:checked ~ ul {
+                height: 50VW;
+           }
+            .fa {
+                display: inline-block;
+                position: absolute;
+                top: 7px; 
+                right: 7px;
+                font-size:7VW;
+            }
+        }
+        
+    }
+}
